@@ -1,0 +1,46 @@
+/* bugSolution.css */
+
+/* Addressing Specificity Conflicts: Use more specific selectors or !important (use cautiously!) */
+#myElement { /* More specific than class */
+  color: blue; 
+}
+
+.myClass {
+  color: red; /* Lower specificity, might be overridden */
+}
+
+/* Addressing Typos: Carefully check all class names and selectors */
+.correctClassName { /* corrected typo */
+  font-size: 16px;
+}
+
+/* Addressing Floating Element Issues: Use clearing techniques or flexbox/grid */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Example using Flexbox for cleaner layout */
+.container {
+  display: flex;
+}
+
+.item {
+  flex: 1;
+}
+
+/* Proper usage of class selectors ensures that the styles are applied without conflicts */
+.main-content {
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.main-content h1 {
+  color: #333;
+}
+
+/* If specificity conflicts cannot be avoided, use !important (sparingly, to avoid future conflicts) */
+.forced-style {
+  color: green !important; /* Use this only as a last resort */
+}
